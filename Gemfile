@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails_db_info'
 gem 'devise'
 gem 'pry'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'

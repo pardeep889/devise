@@ -20,11 +20,16 @@
   			<li> <a href="/users/sign_up">Sign Up</a> </li>
   			<%end%>
   				<% if user_signed_in? %>
+
+          
 				<li class="pull-right active"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-				<% else %>
+		
+      <li class="pull-right" style="padding: 10px;color: blue;"> Welcome <%= current_user.name %></li>
+      	<% else %>
 				<li><%= link_to('Login', new_user_session_path)%></li>
 			<% end %>
-			</ul>
+			
+      </ul>
 			</header>
 			<div class="jumbotron">
 

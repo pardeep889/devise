@@ -25,6 +25,9 @@ Devise.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'devise/orm/active_record'
+  config.omniauth :facebook, "769750563202373", "c1677f008911d444b127fbe0f8c64f3b"
+   config.omniauth :twitter, "GorBJqMa34Z5R56TGjPDZaNB4", "aYh5gnupUEFB48K5A1OKWs2WVhnmlnnHuzATLqVtP5qs8MKYbw"
+
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -136,7 +139,7 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed, new email is stored in
   # unconfirmed_email column, and copied to email column on successful confirmation.
-  config.reconfirmable = true
+  config.reconfirmable = false
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [:email]
