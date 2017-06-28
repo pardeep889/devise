@@ -9,4 +9,8 @@ class WelcomesController < ApplicationController
   def contact
 
   end	
+
+  def fb_callback
+  	binding.pry
+  end
 end

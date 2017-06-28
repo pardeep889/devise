@@ -58,3 +58,4 @@ gem 'devise'
 gem 'pry'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem "koala"
