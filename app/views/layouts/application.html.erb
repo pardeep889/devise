@@ -18,10 +18,12 @@
   			<li> <a href="/welcomes/about">About Us</a> </li>
   			<% if !user_signed_in? %>
   			<li> <a href="/users/sign_up">Sign Up</a> </li>
+
   			<%end%>
   				<% if user_signed_in? %>
 
-          
+        <li> <a href="/post/new">New Post</a> </li>  
+        <li> <a href="/post">List Post</a> </li>
 				<li class="pull-right active"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
 		
       <li class="pull-right" style="padding: 10px;color: blue;"> Welcome <%= current_user.name %></li>

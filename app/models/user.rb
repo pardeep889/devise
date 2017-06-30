@@ -5,12 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   devise :omniauthable, :omniauth_providers => [:facebook, :twitter]
    attr_accessor :name
-
+   has_many :posts
    def name
    	"#{self.first_name} #{self.last_name}"
    end
    def self.from_omniauth(auth)
-   	#binding.pry 
+   #	binding.pry 
   	where(provider: auth.provider, uid: auth.uid).first_or_create! do |user|
 	    user.email = "#{auth.uid}@facebook.com"
 	    user.password = Devise.friendly_token[0,20]
