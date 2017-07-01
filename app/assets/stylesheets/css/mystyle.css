@@ -1,0 +1,32 @@
+body {
+	margin-top: 70px;
+}
+.fbox{
+	text-align: center;
+}
+
+.fbox span {
+	font-size: 75px;
+}
+.jumbotron{
+	text-align: center;
+	opacity: 0.9;
+} 
+.footer {
+	text-align: center;
+}
+.jumbotron p {
+	font-size: 15px;
+}
+.jumbotron h3 {
+	font-weight: bold;
+}
+#mydiv{
+	display: none;
+
+}
+#mydiv1{
+	display: none;
+	text-align: center;
+
+}
