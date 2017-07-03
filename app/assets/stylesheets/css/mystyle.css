@@ -36,3 +36,13 @@ td {
 .jumbotron span {
 	font-size: 75px;	
 }
+.col-sm-4 h3,p {
+	text-align: center;
+}
+.col-sm-4 span {
+	font-size: 70px;
+	text-align: center;
+}
+#mymsg{
+	display: none;
+}
