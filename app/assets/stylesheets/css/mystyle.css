@@ -8,7 +8,7 @@ body {
 .fbox span {
 	font-size: 75px;
 }
-.jumbotron{
+.jumbotron p {
 	text-align: center;
 	opacity: 0.9;
 } 
@@ -29,4 +29,10 @@ body {
 	display: none;
 	text-align: center;
 
+}
+td {
+	text-align: left;
+}
+.jumbotron span {
+	font-size: 75px;	
 }

@@ -1,10 +1,10 @@
 
  <div class="jumbotron">
-            <h3>Share To Social Networks</h3>
+            <h3 style="text-align: center">Share To Social Networks</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit consectetur adipiscing elit. Praesent commodo cursus magna,et.consectetur adipiscing elit. Maecenas sed diam.</p>
             <p>
-            <button  id="status" class="btn btn-primary btn-lg">Post a Status</button>
-            <button  id="pic" class="btn btn-success btn-lg">Post a Picture</button>
+            <button  id="status" class="btn btn-primary ">Post a Status</button>
+            <button  id="pic" class="btn btn-success ">Post a Picture</button>
             </div>
           <hr>
           <div id="mydiv">
@@ -19,34 +19,34 @@
             </form>
           </div>
           <div id="mydiv1">
-            <h3>you are now logged in</h3>
-	
-			<%= form_for @post, url: "/post" do |f| %>
-	 		 Post:<br>
-			  <%= f.text_area :title %><br>	 
-			  <%= f.submit %>
-			<% end %>
-            
+            <h3>Post Your Status</h3>	
+            <%= form_for @post, url: "/post" do |f| %>
+              <div class="form-group">
+                <%= f.text_area :title,class: "form-control", rows: "3", placeholder: "Write What is in your mind......."%>                         
+              </div>
+            <%= f.submit "Submit", class: "btn btn-danger" %> <br>	 	
+              <% end %>            
           </div>
+          <br>
 
        <div class="row"> <!--Features -->
       
         <div class="col-sm-4 fbox"> 
-          <span class="glyphicon glyphicon-heart"></span>
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
           <h3>Easy to Use</h3>
           <p>varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>
           <a  href="#" class="btn btn-success">Read More</a>
         </div>
 
         <div class="col-sm-4 fbox">
-          <span class="glyphicon glyphicon-paperclip"></span>
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
           <h3>Share with Friend</h3>
           <p>varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>
           <a  href="#" class="btn btn-success">Read More</a>
         </div>
 
         <div class="col-sm-4 fbox">
-          <span class="glyphicon glyphicon-eye-open"></span>
+       <span class="glyphicon glyphicon-eye-open  " aria-hidden="true"></span>
           <h3>Real Magic</h3>
           <p>varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>
           <a  href="#" class="btn btn-success">Read More</a>
@@ -61,33 +61,28 @@
            <p>varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>      
            <div class="row">
              <div class="col-sm-6">
-               <img src="img/book.jpg" class="img-responsive" alt="book">
+              <a href="/welcomes/about" class="btn btn-primary">Know More</a>
              </div>
-             <div class="col-sm-6">
-               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>
-                <a  href="#" class="btn btn-default">Download Book</a>
-             </div>
+           
            </div>
         </div>
         <div class="col-sm-6">
           <h3>About Admin</h3>
           <p>varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>
-           <a  href="#" class="btn btn-primary">Know More</a>
+           <a  href="/welcomes/about" class="btn btn-primary">Know More</a>
         </div>
       </div>
-      <footer class="footer">
-        <p>&copy : 2017 Magic App Design by: Admin</p>
-      </footer>
+    
     </div>
     <script>
       $(document).ready(function(){
         // jQuery methods go here...
           $("#pic").click(function(){
-            $("#mydiv").toggle(500);
+            $("#mydiv").toggle(400);
             $("#mydiv1").hide();
             }); 
           $("#status").click(function(){
-            $("#mydiv1").toggle(500);
+            $("#mydiv1").toggle(400);
             $("#mydiv").hide();
           });          
       }); 

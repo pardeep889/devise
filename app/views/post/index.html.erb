@@ -1,12 +1,14 @@
-<h1>Available Posts</h1> 
-<table border="1">
+<h1>Available Posts</h1>
+<div class="">
+ <table class="table table-bordered table-hover">
   <tr>
-    <th>Title</th>  
+    <th class="success">Title</th>  
   </tr> 
   <% @posts.each do |p| %>
     <tr>
-      <td><%= p.title %></td> 
+      <td class="warning" ><%= p.title %></td> 
     </tr>
   <% end %>
-</table>
+ </table>
+</div>
 <br> <br>
