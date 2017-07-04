@@ -12,10 +12,12 @@ class User < ApplicationRecord
    def self.from_omniauth(auth)
    #	binding.pry 
   	where(provider: auth.provider, uid: auth.uid).first_or_create! do |user|
-	    user.email = "#{auth.uid}@facebook.com"
+	    user.email = "#{auth.uid}@{auth.provider}.com"
 	    user.password = Devise.friendly_token[0,20]
 	    user.first_name = auth.info.name   # assuming the user model has a name
-      user.token = auth[:credentials][:token]
+      user.token = auth[:credentials][:token]   
+      user.twitter_token = auth[:credentials][:token]   
+      user.twitter_secret = auth[:credentials][:secret]   
 	    user.confirm
 	    #user.image = auth.info.image # assuming the user model has an image
 	    # If you are using confirmable and the provider(s) you use validate emails, 

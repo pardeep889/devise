@@ -29,7 +29,7 @@ Devise.setup do |config|
     scope: 'email,user_birthday, publish_actions'
   # config.omniauth :facebook, "769750563202373", "c1677f008911d444b127fbe0f8c64f3b",
   #   scope: 'email,user_birthday,publish_actions'
-   config.omniauth :twitter, "GorBJqMa34Z5R56TGjPDZaNB4", "aYh5gnupUEFB48K5A1OKWs2WVhnmlnnHuzATLqVtP5qs8MKYbw"
+   config.omniauth :twitter, "E6aO6Z1zS5Jy79bLxdkZySX7g", "MFMsRHq51326gFCHlrogMQ8Xvczw7w1tR0qLhlwehI6kYAzq0P"
 
 
   # ==> Configuration for any authentication mechanism
