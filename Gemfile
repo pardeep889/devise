@@ -60,3 +60,4 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem "koala"
 gem 'twitter', github: "sferik/twitter"
+gem 'carrierwave', '~> 1.0'
