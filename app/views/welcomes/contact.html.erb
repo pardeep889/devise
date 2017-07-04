@@ -4,47 +4,26 @@
 	<br>Twitter:
 	<br>LinkedIn:
 	<br>Phone: 
-</div>
+
+</div> 	
 <hr>
-<div class="row">
-		<div class="col-sm-4">			
-			<div class="fbox">
-				<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> 
-			</div>
-			<h3> Why Should Contact Us </h3>
-			<p> hello </p>
-		</div>	
-		<div class="col-sm-4">			
-			<div class="fbox">
-				<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
-			</div>
-			<h3> Send us Message </h3>
-		 	<p> <button id="mail" class="btn btn-primary ">Message Now</button>
-		 		<div id="mymsg">
-		 			<form>
-		 				<div class="form-group">
-		 				  <input type="textarea" class="form-control" name="" placeholder= "Write Your Message here...."> <br>
-		 				  <input type="submit" name="" class="form-control btn btn-success" value="Send" >
-		 			</form>
-		 			</div>
-		 		</div>
-		 	</p>	
-		</div>
-		<div class="col-sm-4">			
-			<div class="fbox">
-				<span class="glyphicon glyphicon-send" aria-hidden="true"></span> 
-			</div>
-			<h3> How To Reach</h3>
-			<p> fsjdhhfjs dsfhsdu fidsuhf </p>
-		</div>
-</div>
-<script>
-	$(document).ready(function(){
-        // jQuery methods go here...
-          $("#mail").click(function(){
-            $("#mymsg").toggle(400);
-              })
-      }); 
-</script>
 
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="">Subject</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject...">
+  </div>
+  <div class="form-group">
+    <label for="">Message</label>
+   <textarea class="form-control" style="min-width: 100%; min-height: 200px" placeholder="Write Your Message Here...."></textarea>	
+   
+  </div>
+ 
+  <button type="submit" class="btn btn-danger	">Submit</button>
+</form>
 
+<br>

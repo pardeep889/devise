@@ -59,4 +59,4 @@ gem 'pry'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem "koala"
-gem 'twitter'
+gem 'twitter', github: "sferik/twitter"

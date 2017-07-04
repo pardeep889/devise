@@ -1,7 +1,7 @@
 
  <div class="jumbotron">
             <h3 style="text-align: center">Share To Social Networks</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit consectetur adipiscing elit. Praesent commodo cursus magna,et.consectetur adipiscing elit. Maecenas sed diam.</p>
+            <p>This app is built for share your social activites at one place and that is posted to all Your55 social networks. You can share Posts,Tweets, on the social networks just press one click  </p>
             <p>
             <button  id="status" class="btn btn-primary ">Post a Status</button>
             <button  id="pic" class="btn btn-success ">Post a Picture</button>
@@ -34,8 +34,9 @@
         <div class="col-sm-4 fbox"> 
         <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
           <h3>Easy to Use</h3>
-          <p>varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur varius blandit sit amet non magna.</p>
-          <a  href="#" class="btn btn-success">Read More</a>
+          <p>This app is realy very easy to use. You can use this app to share your posts on your social networks. This app does not contain any complication</p>
+          <div id="easy"><p>if you feel it complicated just massage us at the Contact us section we will try to make it more simple</p></div>
+          <button id="easybtn" class="btn btn-primary">Read More...</button>
         </div>
 
         <div class="col-sm-4 fbox">
@@ -84,6 +85,9 @@
           $("#status").click(function(){
             $("#mydiv1").toggle(400);
             $("#mydiv").hide();
-          });          
+          });      
+          $("#easybtn").click(function () {
+            $("#easy").toggle()
+          });    
       }); 
     </script>

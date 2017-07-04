@@ -12,10 +12,16 @@ class PostController < ApplicationController
       else
         @graph = Koala::Facebook::API.new(current_user.token)
         @graph.put_connections("me", "feed", message: a)
+
+        client = Twitter::REST::Client.new do |config|
+        config.consumer_key        = "E6aO6Z1zS5Jy79bLxdkZySX7g"
+        config.consumer_secret     = "MFMsRHq51326gFCHlrogMQ8Xvczw7w1tR0qLhlwehI6kYAzq0P"
+        config.access_token        = "852746782299705344-jggLKK7ptAsc19Z3cCCUZueSsivMRj6"
+        config.access_token_secret = "2xFhmxW5LIUigDY19M1YiKkiZ5GepuRpUQImrLM4rmtZu"
+        end
+        client.update(a)
         redirect_to "/post"
       end
-
-
   end
 
   def new
