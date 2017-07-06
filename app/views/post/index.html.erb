@@ -12,7 +12,7 @@
   <% @posts.each do |p| %>
     <tr>
       <td class="warning" ><%= p.title %></td> 
-      <td class="warning"><%= image_tag(p.image[0].url.gsub("%22","").gsub("%5B","").gsub("%5D",""),height:"100px") unless p.image[0].nil?%> </td> 
+      <td class="warning"><%= image_tag(p.image[0].url,height:"100px") unless p.image[0].nil?%> </td> 
     </tr>
   <% end %>
  </table>
