@@ -61,3 +61,5 @@ gem 'omniauth-twitter'
 gem "koala"
 gem 'twitter', github: "sferik/twitter"
 gem 'carrierwave', '~> 1.0'
+gem "rmagick"
+gem 'cloudinary'

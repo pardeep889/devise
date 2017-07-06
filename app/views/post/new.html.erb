@@ -1,0 +1,9 @@
+
+<h3>Post Your Status</h3>	
+<%= form_for @post, url: "/post" do |f| %>
+	<div class="form-group">
+		<%= f.text_area :title,class: "form-control", rows: "3", placeholder: "Write What is in your mind......."%>
+	</div>
+	<%= f.submit "Submit", class: "btn btn-danger" %>
+	<a href="/post" class="btn btn-success">Go Back</a>	 	
+<% end %>            

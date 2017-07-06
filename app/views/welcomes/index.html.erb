@@ -8,15 +8,15 @@
             </div>
           <hr>
           <div id="mydiv">
-            <form>              
+            <%= form_for @post, url: "/post" do |f| %>          
               <div class="form-group">
-                <textarea class="form-control" rows="3" placeholder="Write Your Post Here....." ></textarea>
+                <%= f.text_area :title,class: "form-control", rows: "3", placeholder: "Write What is in your mind......."%>                         
                 <label>Please Select Your Image</label>
-                <input type="file" id="exampleInputFile">
+               <%= f.file_field :image, multiple: true %>
                   <p class="help-block">Example block-level help text here.</p>
               </div>
-            <button type="submit" class="btn btn-danger">Submit</button>
-            </form>
+           <%= f.submit "Submit", class: "btn btn-danger" %> <br>
+            <% end %> 
           </div>
           <div id="mydiv1">
             <h3>Post Your Status</h3>	

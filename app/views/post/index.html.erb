@@ -1,14 +1,19 @@
 <h1>Available Posts</h1>
-<div class="">
+
+<div class="pull-right">
+<a href="/post/new" class="btn btn-success">New Post</a>
+</div>
+<br> <br> <br>
  <table class="table table-bordered table-hover">
   <tr>
-    <th class="success">Title</th>  
+    <th class="success">Title</th> 
+    <th class="success">Image</th> 
   </tr> 
   <% @posts.each do |p| %>
     <tr>
       <td class="warning" ><%= p.title %></td> 
+      <td class="warning"><%= image_tag(p.image[0].url.gsub("%22","").gsub("%5B","").gsub("%5D",""),height:"100px") unless p.image[0].nil?%> </td> 
     </tr>
   <% end %>
  </table>
-</div>
 <br> <br>

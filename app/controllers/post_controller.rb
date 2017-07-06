@@ -5,8 +5,9 @@ class PostController < ApplicationController
 
   def create
       a=params[:post][:title]
-      current_user.posts
-      current_user.posts.create(title: a)
+      b=params[:post][:image]
+      # binding.pry      
+      current_user.posts.create(title: a, image: b)
       if current_user.token.blank?
         redirect_to root_path
       else
@@ -25,6 +26,7 @@ class PostController < ApplicationController
            redirect_to "/post", notice: e.message
         end 
       end
+
   end
 
   def new
