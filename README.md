@@ -30,8 +30,8 @@ Things you may want to cover:
           client = Twitter::REST::Client.new do |config|
             config.consumer_key        = "E6aO6Z1zS5Jy79bLxdkZySX7g"
             config.consumer_secret     = "MFMsRHq51326gFCHlrogMQ8Xvczw7w1tR0qLhlwehI6kYAzq0P"
-            config.access_token        = 3270634260-Z7Zc8mxNSFJStwla4M12iBlqSbcrFyiXHIlRygc
-            config.access_token_secret = j9qYlXVSGednhzo2KiBRg325EwaiJLZr7XUHiqadAi6EK
+            config.access_token        = "3270634260-Z7Zc8mxNSFJStwla4M12iBlqSbcrFyiXHIlRygc"
+            config.access_token_secret = "j9qYlXVSGednhzo2KiBRg325EwaiJLZr7XUHiqadAi6EK"
           end  
 
           	image url
