@@ -48,7 +48,13 @@ td {
 display: none;	
 }
 .alert {
-	background-color: #34495E;
-	border-radius: 10px;
-	color: #DC7633;
+background-color: #E28490;
+font-weight: bold;
+font-size: 15px;
+}
+.myfooter{
+	background-color: #292c2f;
+	color: white;
+	height: 300px;
+	margin-bottom: 0px;
 }

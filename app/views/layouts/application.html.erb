@@ -12,7 +12,9 @@
     <div class="container">
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
+        <hr>
       <% end %>
+      
       <!-- Fixed Nav Bar -->
       <div class="navbar navbar-default navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -46,10 +48,43 @@
           <!-- Fixed Nav END -->
 
 			<%= yield %>	
-       <footer class="footer">
-        <p>&copy : 2017 Magic App Design by: Admin</p>
-      </footer>
+      </div>
+      <hr>
+
+      <div class="myfooter">
+      <footer class="footer-basic-centered">
+      <br> <br>
+      <p class="footer-company-motto">The company motto.</p>
+
+      <p class="footer-links page-footer">
+        <a href="#">Home</a>
+        ·
+        <a href="#">Blog</a>
+        ·
+        <a href="#">Pricing</a>
+        ·
+        <a href="#">About</a>
+        ·
+        <a href="#">Faq</a>
+        ·
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">Company Name &copy; 2015</p>
+        <div class="">
+    
+     <a href="www.facebook.com/preet.tam88" class="btn btn-info">Facebook </a> 
+     <a href="https://twitter.com/pardeep_889" class="btn btn-warning" >Twitter</a> 
+     <a href="https://www.linkedin.com/in/pardeep-kumar-15b527143/" class="btn btn-primary">LinkedIn</a> 
+     <a href="#" class="btn btn-success">+918283855713</a> 
+  </div>
+   <p class="help-block pull-right">Email: [Pardeep889@hotmail.com]</p> 
+     
+</div>  
+
+    </footer>
     </div>
+  
 			      
    
   </body>
