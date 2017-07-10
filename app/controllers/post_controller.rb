@@ -45,7 +45,7 @@ class PostController < ApplicationController
         
         if !current_user.provider.blank? && current_user.provider == "facebook"
           @graph = Koala::Facebook::API.new(current_user.token)
-          @graph.put_connections("me", "feed", message: a, picture: p.image[0].metadata["url"])
+          @graph.put_connections("me", "feed", message: a, picture: "http://res.cloudinary.com/https-auth-app123-herokuapp-com/image/upload/v1499410887/nrgpyu1psh7nynsegyoy.jpg")
           redirect_to "/post", notice: "Post successfully."
         end
 
