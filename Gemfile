@@ -64,3 +64,4 @@ gem 'carrierwave', '~> 1.0'
 gem "rmagick"
 gem 'cloudinary'
 gem 'fog'
+gem 'rails_12factor', group: :production

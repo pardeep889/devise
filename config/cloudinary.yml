@@ -4,3 +4,9 @@ development:
   api_key:    "326755781756721"
   api_secret: "KJdeOXw1D9qfnev3fiG-zjtY1MQ"
 
+
+production:  
+  cloud_name: "https-auth-app123-herokuapp-com"
+  api_key:    "326755781756721"
+  api_secret: "KJdeOXw1D9qfnev3fiG-zjtY1MQ"
+
