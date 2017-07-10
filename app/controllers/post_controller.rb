@@ -46,7 +46,7 @@ class PostController < ApplicationController
         if !current_user.provider.blank? && current_user.provider == "facebook"
           @graph = Koala::Facebook::API.new(current_user.token)
         if  p.image.blank?
-            @graph.put_connections("me", "feed", {message: "a")
+            @graph.put_connections("me", "feed", message: "a")
         else
           @graph.put_connections("me", "feed", {message: "a", picture: p.image[0].metadata["url"], link: p.image[0].metadata["url"]})
         end
