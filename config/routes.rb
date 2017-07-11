@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'fb_callback' => 'welcomes#fb_callback'
   resources :post
 
+  post 'create_contact' => 'welcomes#create_contact'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #devise_scope :user do
   #delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session

@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -17,5 +17,23 @@
   <button type="submit" class="btn btn-danger	">Submit</button>
 </form>
 </div>
-<br>
+<br> -->
   
+<%= form_for @mail, url: "/create_contact" do |f| %>
+  <p>
+    <%= f.label :email %><br> 
+    <%= f.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= f.label :subject%><br> 
+    <%= f.text_field :subject %>
+  </p>
+ <p>
+    <%= f.label :message%><br>
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.submit "Send Message" %>
+  </p>
+<% end %>

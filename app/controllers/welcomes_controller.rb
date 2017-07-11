@@ -15,9 +15,23 @@ class WelcomesController < ApplicationController
   end
   def contact
 
+  @mail = Contact.new
   end	
 
   def fb_callback
   	binding.pry
   end
+  def create_contact
+     @contact=Contact.new(contact_params)
+     @contact.save
+     UserMailer.contact_mail(@contact).deliver
+
+#      binding.pry
+      redirect_to "/", notice:  "Message Sent We Will Contact You Soon..."
+  end
+
+  def contact_params
+     params.require(:contact).permit(:email, :subject,:message)
+  end
+
 end
