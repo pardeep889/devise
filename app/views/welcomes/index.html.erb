@@ -9,10 +9,14 @@
            <% if !current_user.provider.blank? && current_user.provider == "twitter" %> 
               <button  id="pic" class="btn btn-success ">Post on Twiiter</button>
             <% end %>
+            <% if current_user.provider.blank? %>
+              <button  id="custom" class="btn btn-success ">Post on Web</button>
+            <% end %>
+            <%# end %>
             </div>
           <hr>
           <div id="mydiv">
-          <h3>Post on Twitter</h3>  
+          <h3>Tweet on Twitter</h3>  
             <%= form_for @post, url: "/post" do |f| %>          
               <div class="form-group">
                 <%= f.text_area :title,class: "form-control", rows: "3", placeholder: "Write What is in your mind......."%>
@@ -35,6 +39,19 @@
                   <p class="help-block">Example block-level help text here.</p>
             <%= f.submit "Submit", class: "btn btn-danger" %> <br>	 	
               <% end %>            
+          </div>
+            <div id="cus">
+          <h3>Post on Website</h3>  
+            <%= form_for @post, url: "/post" do |f| %>          
+              <div class="form-group">
+                <%= f.text_area :title,class: "form-control", rows: "3", placeholder: "Write What is in your mind......."%>
+                </div>                         
+                <label>Please Select Your Image</label>
+               <%= f.file_field :image, multiple: true %>
+                  <p class="help-block">Example block-level help text here.</p>
+              
+           <%= f.submit "Submit", class: "btn btn-danger" %> <br>
+            <% end %> 
           </div>
           <br>
 
@@ -98,5 +115,8 @@
           $("#easybtn").click(function () {
             $("#easy").toggle()
           });    
+          $("#custom").click(function(){
+            $("#cus").toggle(400)
+          });
       }); 
     </script>

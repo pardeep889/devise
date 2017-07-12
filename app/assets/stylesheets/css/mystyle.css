@@ -25,7 +25,6 @@ body {
 }
 #mydiv1{
 	display: none;
-	text-align: center;
 
 }
 td {
@@ -57,4 +56,7 @@ font-size: 15px;
 	color: white;
 	height: 300px;
 	margin-bottom: 0px;
+}
+#cus {
+	display: none;
 }

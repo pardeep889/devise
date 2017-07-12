@@ -9,7 +9,7 @@ class PostController < ApplicationController
     #binding.pry
     p=current_user.posts.create(title: a, image: b)
     if current_user.token.blank?
-      redirect_to root_path
+      redirect_to root_path, notice: "Post successfully."
     else
       begin
         if !current_user.provider.blank? && current_user.provider == "twitter"
@@ -23,40 +23,40 @@ class PostController < ApplicationController
           # binding.pry
           if  p.image.blank?
                   client.update(a)
-          else
-              url = p.image[0].metadata["url"]
-              img = open(url)
-              if img.is_a?(StringIO)
-                file_name = File.basename(url)
-                temp_file = Tempfile.new(file_name)
-                temp_file.binmode
-                temp_file.write(img.read)
-                temp_file.close
+            else
+                url = p.image[0].metadata["url"]
+                img = open(url)
 
-                t_img = temp_file.path
-                client.update_with_media(a, t_img)
-              else
-                t_img = url
-                client.update_with_media(a, open(t_img))
-              end
+                if img.is_a?(StringIO)
+                  file_name = File.basename(url)
+                  temp_file = Tempfile.new(file_name)
+                  temp_file.binmode
+                  temp_file.write(img.read)
+                  temp_file.close
+
+                  t_img = temp_file.path
+                  client.update_with_media(a, t_img)
+                else
+                  t_img = url
+                  client.update_with_media(a, open(t_img))
+                end
           end
           redirect_to "/post", notice: "Post successfully."
         end
         
         if !current_user.provider.blank? && current_user.provider == "facebook"
-          @graph = Koala::Facebook::API.new(current_user.token)
-        if  p.image.blank?
-            @graph.put_connections("me", "feed", message: a)
-        else
-          @graph.put_connections("me", "feed", {message: a, picture: p.image[0].metadata["url"], link: p.image[0].metadata["url"]})
-        end
+            @graph = Koala::Facebook::API.new(current_user.token)
+          if  p.image.blank?
+              @graph.put_connections("me", "feed", message: a)
+            else
+           @graph.put_connections("me", "feed", {message: a, picture: p.image[0].metadata["url"], link: p.image[0].metadata["url"]})
+          end
           redirect_to "/post", notice: "Post successfully."
-      end
+        end
       rescue => e
          redirect_to "/post", notice: e.message
       end 
     end
-
   end
 
   def new
