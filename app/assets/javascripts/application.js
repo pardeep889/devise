@@ -14,3 +14,4 @@
 //= require turbolinks
 //= require_tree 
 //= require cloudinary
+//= require masonry/jquery.masonry

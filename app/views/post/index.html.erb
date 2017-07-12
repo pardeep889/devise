@@ -1,19 +1,29 @@
 <h1>Available Posts</h1>
 
 <div class="pull-right">
-<a href="/post/new" class="btn btn-success">New Post</a>
+<a href="/" class="btn btn-success">New Post</a>
 </div>
-<br> <br> <br>
- <table class="table table-bordered table-hover">
-  <tr>
-    <th class="success">Title</th> 
-    <th class="success">Image</th> 
-  </tr> 
+
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
   <% @posts.each do |p| %>
-    <tr>
-      <td class="warning" ><%= p.title %></td> 
-      <td class="warning"><%= image_tag(p.image[0].url,height:"100px") unless p.image[0].nil?%> </td> 
-    </tr>
+
+      <div class="box col1 col2">
+             
+        <b>Title: </b><%= p.title %>
+        <p> <%= image_tag(p.image[0].url,height:"100px") unless p.image[0].nil?%>  </p>
+      </div>     
+    
   <% end %>
- </table>
-<br> <br>
+</div>
+<script type="text/javascript">
+  $(function(){
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    columnWidth: 200,
+    gutterWidth: 20
+  });
+
+});
+
+</script>

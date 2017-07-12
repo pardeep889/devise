@@ -65,3 +65,4 @@ gem "rmagick"
 gem 'cloudinary'
 gem 'fog'
 gem 'rails_12factor', group: :production
+gem 'masonry-rails'
