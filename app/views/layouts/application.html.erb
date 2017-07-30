@@ -11,79 +11,73 @@
 
   <body> 
     <div class="container">
-    <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-        <hr>
-      <% end %>
-      
-      <!-- Fixed Nav Bar -->
-      <div class="navbar navbar-default navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="/">Magic App </a>
-          <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li> <a href="/">Home</a> </li>
-              <li> <a href="/welcomes/contact">Contact us</a> </li>
-              <li> <a href="/welcomes/about">About Us</a> </li>
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+              <hr>
+            <% end %>
+            
+            <!-- Fixed Nav Bar -->
+            <div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+              <div class="container">
+                <a class="navbar-brand" href="/">Magic App </a>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/welcomes/contact">Contact us</a> </li>
+                    <li> <a href="/welcomes/about">About Us</a> </li>
 
-               <% if !user_signed_in? %>
-               <li> <a href="/users/sign_up">Sign Up</a> </li>
-               <%end%>
-               <% if user_signed_in? %>
-               
-                  <li> <a href="/post">List Post</a> </li>
-                  <li class="pull-right active"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>          
-                  <li class="pull-right" style="padding: 10px;color: orange; margin-top: 5px;"> Welcome <%= current_user.name %></li>
-                <% else %>
-                  <li><%= link_to('Login', new_user_session_path)%></li>
-                <% end %>
-            </ul>
-          </div>
-      </div>
+                     <% if !user_signed_in? %>
+                      <li> <a href="/users/sign_up">Sign Up</a> </li>
+                     <%end%>
+                     <% if user_signed_in? %>                     
+                        <li> <a href="/post">List Post</a> </li>
+                        <li class="pull-right active"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>          
+                        <li class="pull-right" style="padding: 10px;color: orange; margin-top: 5px;"> Welcome <%= current_user.name %></li>
+                      <% else %>
+                        <li><%= link_to('Login', new_user_session_path)%></li>
+                      <% end %>
+                  </ul>
+                </div>
+              </div>
             </div>
-          <!-- Fixed Nav END -->
+                <!-- Fixed Nav END -->
 
-			<%= yield %>	
-      </div>
+      			<%= yield %>	
+
+    </div>
       <hr>
 
       <div class="myfooter">
-      <footer class="footer-basic-centered">
-      <br> <br><br>
-      <p class="footer-company-motto">We are Glad you are using our Website.</p>
+        <footer class="footer-basic-centered">
+            <br> <br><br>
+            <p class="footer-company-motto">We are Glad you are using our Website.</p>
 
-      <p class="footer-links page-footer">
-        ·
-        <a href="/">Home</a>  
-        ·    
-        <a href="/welcomes/about">About</a>
-        ·
-        <a href="/welcomes/contact">Contact</a>
-        ·
-      </p>
-
-      <p class="footer-company-name">Magic App &copy; 14 july 2017 All Right Reserved</p>
-      <br> <br>
-        <div class="" style="text-align: center;">      
-           <a href="https://www.facebook.com/preet.tam88" class="btn btn-info" target="_blank">Facebook </a> 
-           <a href="https://twitter.com/pardeep_889" class="btn btn-warning" target="_blank">Twitter</a> 
-           <a href="https://www.linkedin.com/in/pardeep-kumar-15b527143/" class="btn btn-primary"target="_blank">LinkedIn</a> 
-           <a href="https://plus.google.com/u/0/113920298443328715147" class="btn btn-danger" target="_blank"> Google +</a> 
-        </div>
-        <br>
-   <p style= "text-align: center;" class="help-block">Email: [ Pardeep889@hotmail.com ]</p> 
+              <p class="footer-links page-footer">
+                ·
+                <a href="/">Home</a>  
+                ·    
+                <a href="/welcomes/about">About</a>
+                ·
+                <a href="/welcomes/contact">Contact</a>
+                ·
+              </p>       
+              <p>This Web App is Created  and Managed By Pardeep and Aman</p> <br>
+              <div class="" style="text-align: center;">      
+                 <a href="https://www.facebook.com/preet.tam88" class="btn btn-info" target="_blank">Facebook </a> 
+                 <a href="https://twitter.com/pardeep_889" class="btn btn-warning" target="_blank">Twitter</a> 
+                 <a href="https://www.linkedin.com/in/pardeep-kumar-15b527143/" class="btn btn-primary"target="_blank">LinkedIn</a> 
+                 <a href="https://plus.google.com/u/0/113920298443328715147" class="btn btn-danger" target="_blank"> Google +</a> 
+              </div>
      
-</div>  
-
-    </footer>
-    </div>
-  
-			      
-   
+              <br>
+              <p style= "text-align: center; margin-top: 0px;" class="help-block">Email: [ Pardeep889@hotmail.com ]</p>
+              <p class="footer-company-name">Magic App &copy; 14 july 2017 All Right Reserved</p>     
+          </div>
+        </footer>  
   </body>
 </html>
